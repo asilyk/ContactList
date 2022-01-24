@@ -11,7 +11,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gPT-kL-ksE">
             <objects>
-                <tabBarController id="nr6-Re-P81" sceneMemberID="viewController">
+                <tabBarController id="nr6-Re-P81" customClass="TabBarController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PLM-8e-931">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +29,7 @@
         <!--Persons List-->
         <scene sceneID="BcA-hg-LVs">
             <objects>
-                <tableViewController id="nKt-ik-zbM" sceneMemberID="viewController">
+                <tableViewController id="nKt-ik-zbM" customClass="PersonsListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2lj-eB-bdl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
         <!--Person full name-->
         <scene sceneID="N8R-b0-WRF">
             <objects>
-                <viewController id="hLa-No-3bv" sceneMemberID="viewController">
+                <viewController id="hLa-No-3bv" customClass="DetailedInfoViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AVB-f6-qfM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,6 +93,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Person full name" id="5eP-Ek-ZEj"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="Qvh-oN-R1Q" id="HrZ-ZA-21N"/>
+                        <outlet property="personFullNameNavigationItem" destination="5eP-Ek-ZEj" id="NMY-gZ-r2r"/>
+                        <outlet property="phoneNumberLabel" destination="037-Gj-Eeh" id="rNc-pB-9xe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gh-Kz-KoM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,24 +106,16 @@
         <!--Persons List-->
         <scene sceneID="QXr-Oz-arl">
             <objects>
-                <tableViewController id="ztF-4j-R0g" sceneMemberID="viewController">
+                <tableViewController id="ztF-4j-R0g" customClass="DetailedPersonsListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oza-z4-Tpk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="phoneNumberID" id="XB2-V9-mul">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailID" id="XB2-V9-mul">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XB2-V9-mul" id="Uks-vq-Ei9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emailID" id="Pbh-ia-GxI">
-                                <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pbh-ia-GxI" id="ycl-wl-dOK">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
