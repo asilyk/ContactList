@@ -18,11 +18,12 @@ struct Person {
 
     static func getPersons() -> [Person] {
         var persons: [Person] = []
+        let dataManager = DataManager()
 
-        let names = DataManager.names.shuffled()
-        let surnames = DataManager.surnames.shuffled()
-        let phoneNumbers = DataManager.phoneNumbers.shuffled()
-        let emails = DataManager.emails.shuffled()
+        let names = dataManager.names.shuffled()
+        let surnames = dataManager.surnames.shuffled()
+        let phoneNumbers = dataManager.phoneNumbers.shuffled()
+        let emails = dataManager.emails.shuffled()
 
         for index in 0..<names.count {
             let person = Person(

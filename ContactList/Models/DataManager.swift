@@ -6,7 +6,7 @@
 //
 
 class DataManager {
-    static let names = [
+    let names = [
         "Liam",
         "Olivia",
         "Noah",
@@ -29,7 +29,7 @@ class DataManager {
         "Harper"
     ]
 
-    static let surnames = [
+    let surnames = [
         "Smith",
         "Johnson",
         "Williams",
@@ -52,9 +52,9 @@ class DataManager {
         "Martin",
     ]
 
-    static let phoneNumbers = (0...20).map{ _ in Int.random(in: 100_000_000...999_999_999) }
+    let phoneNumbers = (0...20).map { _ in Int.random(in: 100_000_000...999_999_999) }
 
-    static let emails = [
+    let emails = [
         "myopre@mail.ru",
         "neemed@icloud.com",
         "nitone@yandex.ru",
