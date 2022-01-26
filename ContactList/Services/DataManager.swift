@@ -6,6 +6,8 @@
 //
 
 class DataManager {
+    static let shared = DataManager()
+
     let names = [
         "Liam", "Olivia", "Noah", "Emma",
         "Oliver", "Ava", "Elijah", "Charlotte",
@@ -36,4 +38,6 @@ class DataManager {
         "swifty@mail.ru", "bokko@icloud.com",
         "gogog@yandex.ru", "zxcas@gmail.com"
     ]
+
+    private init() {}
 }
