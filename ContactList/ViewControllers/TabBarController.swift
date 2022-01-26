@@ -13,6 +13,8 @@ class TabBarController: UITabBarController {
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         passPersonsToLists()
     }
 
