@@ -9,12 +9,12 @@ struct Person {
     let name: String
     let surname: String
 
+    let phoneNumber: Int
+    let email: String
+
     var fullName: String {
         "\(name) \(surname)"
     }
-
-    let phoneNumber: Int
-    let email: String
 
     static func getPersons() -> [Person] {
         var persons: [Person] = []
