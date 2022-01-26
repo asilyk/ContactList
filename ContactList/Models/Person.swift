@@ -25,7 +25,9 @@ struct Person {
         let phoneNumbers = dataManager.phoneNumbers.shuffled()
         let emails = dataManager.emails.shuffled()
 
-        for index in 0..<names.count {
+        let iterationCount = min(names.count, surnames.count, phoneNumbers.count, emails.count)
+
+        for index in 0..<iterationCount {
             let person = Person(
                 name: names[index],
                 surname: surnames[index],
